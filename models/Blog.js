@@ -52,8 +52,8 @@ Blog.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'project',
+    modelName: 'blog',
   }
 );
 
-module.exports = Project;
+module.exports = Blog;
