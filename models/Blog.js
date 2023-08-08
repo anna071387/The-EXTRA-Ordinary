@@ -22,13 +22,6 @@ Blog.init(
     content: {
       type: DataTypes.STRING,
       },
-    comment_created: {
-      type: DataTypes.STRING,
-      references: {
-        model: 'user',
-        key: 'id',
-      },
-    },
     date_created: {
       type: DataTypes.DATE,
       allowNull: false,
