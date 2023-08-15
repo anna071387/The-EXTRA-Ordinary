@@ -5,7 +5,7 @@ const withAuth = require('../utils/auth');
 router.get('/', async (req, res) => {
   try {
     // Get all projects and JOIN with user data
-    const blogData = await Blog.findAll({
+    const blogsData = await Blog.findAll({
       include: [
         {
           model: User,
@@ -15,11 +15,11 @@ router.get('/', async (req, res) => {
     });
 
     // Serialize data so the template can read it
-    const blogs = blogData.map((books) => blogs.get({ plain: true }));
-console.log(logs);
+    const blogs = blogsData.map((blogs) => blogs.get({ plain: true }));
+console.log(blogs);
     // Pass serialized data and session flag into template
     res.render('homepage', {
-      books,
+      blogs,
       logged_in: req.session.logged_in
     });
   } catch (err) {
@@ -28,9 +28,9 @@ console.log(logs);
   }
 });
 
-router.get('/book/:id', async (req, res) => {
+router.get('/blog/:id', async (req, res) => {
   try {
-    const booksData = await Book.findByPk(req.params.id, {
+    const blogsData = await Blog.findByPk(req.params.id, {
       include: [
         {
           model: User,
@@ -39,10 +39,10 @@ router.get('/book/:id', async (req, res) => {
       ],
     });
 
-    const books = booksData.get({ plain: true });
+    const blogs = blogsData.get({ plain: true });
 
-    res.render('books', {
-      ...books,
+    res.render('blogs', {
+      ...blogs,
       logged_in: req.session.logged_in
     });
   } catch (err) {
@@ -56,7 +56,7 @@ router.get('/profile', withAuth, async (req, res) => {
     // Find the logged in user based on the session ID
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
-      include: [{ model: Book }],
+      include: [{ model: Blog }],
     });
     
     const user = userData.get({ plain: true });

@@ -1,0 +1,152 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    background-color: rgb(203, 229, 254);
+}
+
+
+ #display_image {
+    width: 375px;
+    height: 211px;
+    border:1px solid black;
+    background-position: center;
+    background-size: cover;
+
+} 
+
+
+.nav-link {
+    color: white !important;
+}
+
+.btn {
+    color: white;
+    background-color: #1373e9 !important;
+    outline: #0a6dd7;
+}
+
+.btn:hover {
+color: white;
+    background-color: #0a6dd7 !important;
+    outline: 2px black;
+}
+
+footer a {
+    color: #78a0ff;
+}
+
+.list-group a {
+    color: #1373e9;
+}
+
+.item a {
+    color: #1373e9;
+}
+
+.list-unstyled a {
+    color: #0072ee;
+}
+
+/* search bar */
+.searchBar {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 1000px;
+    display: inline;
+    position: relative;
+
+}
+
+.list-group {
+    margin-bottom: 20px;
+}
+
+.portfolio-item {
+    margin-bottom: 30px;
+}
+
+.card-img-top {
+    height: 400px;
+}
+
+.splash {
+    height: 35em;
+    padding-top: 9em;
+    background: no-repeat center center;
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+}
+
+.splash .text-muted {
+    color: white !important;
+}
+
+.error-template {
+    padding: 40px 15px;
+    text-align: center;
+}
+
+.error-details {
+    text-align: left
+}
+
+.error-actions {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.error-actions .btn {
+    margin-right: 10px;
+}
+
+.topBottomOffset {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.topOffset {
+    margin-top: 20px;
+}
+
+header, .blog:not(:last-child) {
+    border-bottom: 2px solid #0a6dd7;
+  }
+  
+  .no-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #1b89bc;
+    text-decoration: none;
+    font-size: 100%;
+    padding: 10px;
+    margin-right: 50px;
+  }
+  
+  .no-button:hover {
+    color: #0a6dd7;
+    text-decoration: underline;
+    
+  }
+  
+  .rating-amount {
+    color: #9f0f02;
+    font-weight: bold;
+    margin-left: -5px;
+  }
+  
+  .box {
+    margin-top: 25px;
+    width: 100%;
+    height: 211px;
+    border:1px solid #0a6dd7;
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
+    padding:  15px;
+    background-color: #fdfdfd;
+} 
